@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Practice </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <!--mini task css-->
+<style>
+    #container{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-container-1{
+    position: relative;
+    border: 2px solid black;
+    height:40px;
+    width:100px;
+    cursor: pointer;
+}
+
+.button-1{
+    position: relative;
+    background-color: black;
+    height:36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.button{
+    left: 60px;
+}
+.body-color{
+    background-color: rgb(219, 138, 138);
+  
+}
+</style>
+
+
+   
+    <!--jQuery Selectors-->
+    <p class="real">Hello this is me - remove by clicking the button</p>
+
+    <button>Click Here </button>
+   
+   <hr>
+   
+   <!--jQuery Events-->
+
+   <p class="events-js">Javascript Events - hide on click </p>
+   <p class="events-js1">Javascript Events 1- hide on double click </p>
+   <input type="text" id="input_class" placeholder="Blur Event"> <span class="input_span" style="display: none;">add value </span>
+   <p class="events-js4">Javascript Events 3 - hover</p>
+  
+   <hr>
+   <!--hide and show effects-->
+
+   <button id="hide">Hide</button>
+   <button id="display">Dispplay</button>
+   <span class="testing">This is testing content</span>
+  <hr>
+   <!--toggle-->
+
+   <button id="toggle" style="height: 40px; cursor: grab;">Toggle Button</button>
+   <div class="toggle-content" style="display: none;">
+   <h1>hi</h1>
+   <h2>hello</h2>
+   <p>this is paragraph</p>
+   <p>this is for testing</p>
+   </div>
+   <hr>
+
+   <!--fade in and out-->
+   <div class="fade-container" style="height: 500px; width: 500px; display: inline; margin-right: 10px;">
+
+   <button id="fade" style="height: 40px; width: 100px; cursor: grab; margin-bottom: 10px; " >Click</button>
+   
+
+   <div id="div1" style="display:none; background-color:red; height: 50px; width: 100px; margin-bottom: 10px; text-align: center;">wait</div>
+   <div id="div2" style="display:none; background-color:goldenrod; height: 50px; width: 100px; margin-bottom: 10px; text-align: center;">wait 1 second</div>
+   <div id="div3" style="display:none; background-color:green; height: 50px; width: 100px; margin-bottom: 10px; text-align: center;">almost done</div>
+   <div id="div4" style="display:none; background-color:grey; height: 50px; width: 100px; margin-bottom: 10px; text-align: center;">done</div>
+   </div>
+
+  <hr>
+
+ <!-- jquery slide methods-->
+
+ <div class="slide-toggle" style="height: 30px; width: 100%; background-color: bisque; font-size: 30px; text-align: center;">Click Here for the slide</div>
+ <div class="slide-container" style="background-color: rgb(160, 213, 213); display: none; height: 100px; width: 100%; text-align: center; padding: 30px;">Testing content</div>
+
+ <hr>
+ <!--mini task-->
+ <div id="container">change the body color
+    <div class="button-container-1">
+        <div class="button-1"></div>
+    </div>    
+</div> 
+ 
+<hr>
+<!--jquery animation-->
+<button id="stop" style="height: 30px; width: 80px; margin-bottom: 20px;" >Stop</button>
+<button id="start" style="height: 30px; width: 80px; margin-bottom: 20px;" >start</button>
+
+<div class="slide-toggle2" style="height: 30px; width: 100%; background-color: rgb(153, 115, 68); font-size: 30px; text-align: center;">SLIDE</div>
+<div class="slide-container2" style="background-color: rgb(118, 220, 220); display: none; height: 100px; width: 100%; text-align: center; padding: 30px;">Testing content</div>
+
+<hr>
+<!--text(), html()-->
+<button id="text" style="height: 30px; width: 80px; margin-bottom: 20px;" >text</button>
+<button id="htmlElement" style="height: 30px; width: 80px; margin-bottom: 20px;" >ht element</button><br>
+<button id="attrElement" style="height: 30px; width: 80px; margin-bottom: 20px;" >attr value</button><br>
+
+<p id="testingText" style="display: none"><b>testing content</b></p>
+<p> <a href="https://www.w3schools.com/jquery/jquery_examples.asp" id="attrValue">Here is a Link</a></p>
+<hr>
+<input type="text" id="inputValueId"> <button id="inputFieldButton">submit</button>
+<hr>
+
+<!--set the value using text(), html()-->
+
+<p class="setting_value">this is my paragraph</p>
+<div class="setting_div"><p class="setting_value2">this is my another paragraph - click me</p></div>
+<button id="setting_button" style="height: 60px; width: 80px; margin-bottom: 20px;" >change text</button>
+<hr>
+
+
+<button id="add_item_button" style="height: 60px; width: 80px; margin-bottom: 20px;" >Add item</button>
+<button id="paragraph_button" style="height: 60px; width: 80px; margin-bottom: 20px;" >add para</button>
+
+
+<ul>
+    <li>first</li>
+    <li>second</li>
+    <li>Third</li>
+</ul>
+
+<p class="apend_para">this is my paragraph</p>
+<p class="apend_para">this is my 2nd paragraph</p>
+
+
+<hr>
+<div class="animate"><div class="animation-div" style="height: 80px; width: 80px; background-color: red; position: absolute; border-radius: 50%; text-align: center;" >slow</p></div></div> 
+
+
+
+    <script>
+       $(document).ready(function(){
+        $("button").click(function(){
+            $("p.real").hide();   
+        });
+       });
+
+       //jq events
+
+       //1. click
+       $(document).ready(function(){
+        $("p.events-js").click(function(){
+            $(this).hide();
+        });
+       });
+
+       //2.dbclick
+       $(document).ready(function(){
+        $("p.events-js1").dblclick(function(){
+            $(this).hide();
+        });
+       });
+       
+       //hover
+      // $(document).ready(function(){
+        //$(".events-js4").hover(function(){
+          //  alert("hiiii");
+        //});
+       //});
+
+       //blur event
+       $(document).ready(function(){
+        $("input#input_class").blur(function(){
+            $("span").css("display", "inline");
+        });
+       });
+      
+       //hide and show
+
+       $(document).ready(function(){
+        $("button#hide").click(function(){
+            $(".testing").hide("slow");
+        });
+        $("button#display").click(function(){
+            $(".testing").show("slow , 0.20");
+        });
+       }); 
+   
+       //toogle 
+
+       $(document).ready(function(){
+        $("#toggle").click(function(){
+            $(".toggle-content").toggle();
+        });
+       });
+       
+       //fade in and out
+     $(document).ready(function(){
+        $("#fade").click(function(){
+            $("#div1").fadeIn("slow");
+            $("#div2").fadeIn(2000);
+            $("#div3").fadeIn(6000);
+            $("#div4").fadeIn(9000);  
+        });
+     });
+
+     //slidetoggle
+     $(document).ready(function(){
+     $("div.slide-toggle").click(function(){
+        $("div.slide-container").slideToggle("slow");
+     });
+     });
+
+     //mini task script
+     $(document).ready(function(){
+        $(".button-container-1").click(function(){
+        $('body').toggleClass("body-color");
+        $(".button-1").toggleClass("button");
+    });
+}); 
+    
+       $(function(){
+        $(".animate").click(function(){
+            $(".animation-div").animate({
+                left:'150px',
+                width:'130px',
+                height:'130px',
+                fontSize:'50px',
+            });
+           
+        });
+       });
+
+       $(function(){
+            $("#start").click(function(){
+                $(".slide-container2").slideDown(8000);
+            });
+
+            $("#stop").click(function(){
+                $(".slide-container2").stop();
+            });
+       });
+
+       //text()  , html() , value()
+        $(document).ready(function(){
+        $("#text").click(function(){
+            alert('' + $("#testingText").text());
+        })
+        $("#htmlElement").click(function(){
+            alert(''+ $("#testingText").html());
+        });
+       
+       
+        $("#inputFieldButton").click(function(){
+            alert('entered value: ' +  $("#inputValueId").val());
+        });
+
+        $("#attrElement").click(function(){
+            alert('' + $("#attrValue").attr("href"));
+        });
+
+    });
+       
+    //text- changing the value of element using text()
+
+      $(document).ready(function(){
+        $("#setting_button").click(function(){
+            $(".setting_value").text("i wish i was h1 instead of paragraph");
+        });
+       $(".setting_div").click(function(){
+        $(".setting_value2").text("hello there!").css("color",  "red");
+       });
+
+      });
+
+      $(document).ready(function(){
+        $("#add_item_button").click(function(){
+        $("ul").append("<li>fourth</li>");
+      });
+    });
+    
+        </script>
+</body>
+</html>
